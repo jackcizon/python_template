@@ -4,13 +4,13 @@ from pathlib import Path
 from typing import Literal
 
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-SRC_DIR = os.path.join(ROOT_DIR, "src")
+python_template_DIR = os.path.join(ROOT_DIR, "python_template")
 
 ENVS_DIR = os.path.join(ROOT_DIR, "envs")
 ENV_FLAG = os.getenv("ENV", "dev")  # register into os envs, default is dev
 
 
-class Settings:
+class Settings:  # pragma: no cover
     """app settings"""
 
     @staticmethod
@@ -28,6 +28,3 @@ class Settings:
 
 # use module level singleton
 settings = Settings()
-
-if __name__ == "__main__":
-    print(settings.env)

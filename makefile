@@ -3,10 +3,10 @@
 all: pre_commit coverage
 
 lint:
-	poetry run ruff check src/ tests/
+	poetry run ruff check python_template/ tests/
 
 format:
-	poetry run ruff format src/ tests/
+	poetry run ruff format python_template/ tests/
 
 type:
 	poetry run mypy --config-file mypy.ini
